@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Website Development Roadmap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .phase-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .phase-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .tool-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .timeline-item {
+            border-left: 3px solid #667eea;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #667eea;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-12">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">Mental Health Platform Development Roadmap</h1>
+            <p class="text-xl text-center opacity-90">Building a Wysa-like platform with AI chatbot and CBT features</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Project Overview -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Project Overview</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <p class="text-gray-700 mb-4">
+                    This roadmap outlines the development of a comprehensive mental health platform featuring an AI-powered chatbot, 
+                    Cognitive Behavioral Therapy (CBT) tools, mood tracking, and personalized mental wellness resources.
+                </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <div class="text-2xl font-bold text-blue-600">AI Chatbot</div>
+                        <p class="text-sm text-gray-600">24/7 emotional support</p>
+                    </div>
+                    <div class="text-center p-4 bg-green-50 rounded-lg">
+                        <div class="text-2xl font-bold text-green-600">CBT Tools</div>
+                        <p class="text-sm text-gray-600">Evidence-based therapy</p>
+                    </div>
+                    <div class="text-center p-4 bg-purple-50 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600">Mood Tracking</div>
+                        <p class="text-sm text-gray-600">Daily wellness monitoring</p>
+                    </div>
+                    <div class="text-center p-4 bg-orange-50 rounded-lg">
+                        <div class="text-2xl font-bold text-orange-600">Resources</div>
+                        <p class="text-sm text-gray-600">Educational content</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Architecture -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Technical Architecture</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5ebe41b1-956e-4d30-90a0-0c26dbfc2816.png" alt="System architecture diagram showing frontend, backend, AI services, database, and third-party integrations for mental health platform" class="w-full rounded-lg mb-6" />
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Frontend Stack</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <span class="tool-badge text-white px-3 py-1 rounded-full text-sm mr-2">React</span>
+                                Component-based UI framework
+                            </li>
+                            <li class="flex items-center">
+                                <span class="tool-badge text-white px-3 py-1 rounded-full text-sm mr-2">Tailwind CSS</span>
+                                Utility-first CSS framework
+                            </li>
+                            <li class="flex items-center">
+                                <span class="tool-badge text-white px-3 py-1 rounded-full text-sm mr-2">TypeScript</span>
+                                Type-safe JavaScript
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Backend Stack</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <span class="tool-badge text-white px-3 py-1 rounded-full text-sm mr-2">Node.js</span>
+                                Runtime environment
+                            </li>
+                            <li class="flex items-center">
+                                <span class="tool-badge text-white px-3 py-1 rounded-full text-sm mr-2">Express.js</span>
+                                Web application framework
+                            </li>
+                            <li class="flex items-center">
+                                <span class="tool-badge text-white px-3 py-1 rounded-full text-sm mr-2">MongoDB</span>
+                                NoSQL database
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Phases -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Development Phases</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Phase 1 -->
+                <div class="phase-card bg-white rounded-lg shadow-md p-6">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-blue-600">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Foundation & MVP</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• User authentication system</li>
+                        <li>• Basic chatbot interface</li>
+                        <li>• Mood tracking functionality</li>
+                        <li>• Responsive web design</li>
+                        <li>• Database schema design</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="phase-card bg-white rounded-lg shadow-md p-6">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-green-600">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">AI Integration</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Advanced NLP for chatbot</li>
+                        <li>• Sentiment analysis</li>
+                        <li>• Personalized responses</li>
+                        <li>• Conversation memory</li>
+                        <li>• Emotion detection</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="phase-card bg-white rounded-lg shadow-md p-6">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-purple-600">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">CBT Features</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Thought records</li>
+                        <li>• Behavioral activation</li>
+                        <li>• Mindfulness exercises</li>
+                        <li>• Progress tracking</li>
+                        <li>• Therapeutic exercises</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="phase-card bg-white rounded-lg shadow-md p-6">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-orange-600">4</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Advanced Features</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Mobile app development</li>
+                        <li>• Push notifications</li>
+                        <li>• Community features</li>
+                        <li>• Therapist dashboard</li>
+                        <li>• Analytics & reporting</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 5 -->
+                <div class="phase-card bg-white rounded-lg shadow-md p-6">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-red-600">5</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Security & Compliance</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• HIPAA compliance</li>
+                        <li>• Data encryption</li>
+                        <li>• Security audits</li>
+                        <li>• Privacy controls</li>
+                        <li>• Backup systems</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 6 -->
+                <div class="phase-card bg-white rounded-lg shadow-md p-6">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-indigo-600">6</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Scaling & Optimization</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Performance optimization</li>
+                        <li>• Load testing</li>
+                        <li>• CDN integration</li>
+                        <li>• Multi-language support</li>
+                        <li>• Continuous deployment</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Technologies -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Essential Tools & Free Alternatives</h2>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+                    <!-- AI/NLP -->
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-semibold text-lg mb-3 text-gray-800">AI & NLP</h3>
+                        <div class="bg-blue-50 p-3 rounded mb-3">
+                            <span class="font-medium text-blue-700">Free Tool:</span>
+                            <div class="text-sm">Hugging Face Transformers</div>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Pre-trained models</li>
+                            <li>• Custom model training</li>
+                            <li>• Sentiment analysis</li>
+                            <li>• Text classification</li>
+                        </ul>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-semibold text-lg mb-3 text-gray-800">Database</h3>
+                        <div class="bg-green-50 p-3 rounded mb-3">
+                            <span class="font-medium text-green-700">Free Tool:</span>
+                            <div class="text-sm">MongoDB Atlas (Free Tier)</div>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 512MB storage</li>
+                            <li>• Shared RAM</li>
+                            <li>• Automated backups</li>
+                            <li>• SSL encryption</li>
+                        </ul>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-semibold text-lg mb-3 text-gray-800">Backend Framework</h3>
+                        <div class="bg-purple-50 p-3 rounded mb-3">
+                            <span class="font-medium text-purple-700">Free Tool:</span>
+                            <div class="text-sm">Node.js + Express.js</div>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Open source</li>
+                            <li>• Large community</li>
+                            <li>• Middleware support</li>
+                            <li>• REST API ready</li>
+                        </ul>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-semibold text-lg mb-3 text-gray-800">Frontend Framework</h3>
+                        <div class="bg-orange-50 p-3 rounded mb-3">
+                            <span class="font-medium text-orange-700">Free Tool:</span>
+                            <div class="text-sm">React + Vite</div>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Component-based</li>
+                            <li>• Fast development</li>
+                            <li>• Hooks system</li>
+                            <li>• Rich ecosystem</li>
+                        </ul>
+                    </div>
+
+                    <!-- Deployment -->
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-semibold text-lg mb-3 text-gray-800">Deployment</h3>
+                        <div class="bg-red-50 p-3 rounded mb-3">
+                            <span class="font-medium text-red-700">Free Tool:</span>
+                            <div class="text-sm">Vercel/Netlify</div>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Free hosting</li>
+                            <li>• SSL certificates</li>
+                            <li>• CDN included</li>
+                            <li>• CI/CD pipelines</li>
+                        </ul>
+                    </div>
+
+                    <!-- Monitoring -->
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-semibold text-lg mb-3 text-gray-800">Monitoring</h3>
+                        <div class="bg-indigo-50 p-3 rounded mb-3">
+                            <span class="font-medium text-indigo-700">Free Tool:</span>
+                            <div class="text-sm">Sentry (Free Tier)</div>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Error tracking</li>
+                            <li>• Performance monitoring</li>
+                            <li>• Real-time alerts</li>
+                            <li>• User feedback</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Requirements -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Team Composition</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">👨‍💻</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Frontend Developer</h3>
+                    <p class="text-sm text-gray-600">React, TypeScript, UI/UX</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🔧</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Backend Developer</h3>
+                    <p class="text-sm text-gray-600">Node.js, MongoDB, APIs</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🤖</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">AI/ML Engineer</h3>
+                    <p class="text-sm text-gray-600">NLP, Chatbot, AI models</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎨</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">UI/UX Designer</h3>
+                    <p class="text-sm text-gray-600">Wireframes, Prototypes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Timeline -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Implementation Timeline</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="space-y-8">
+                    <!-- Month 1 -->
+                    <div class="timeline-item pl-8">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Month 1-2: Foundation</h3>
+                        <p class="text-gray-600 mb-3">Setup and basic MVP development</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Project setup and architecture</li>
+                            <li>• User authentication system</li>
+                            <li>• Basic chatbot interface</li>
+                            <li>• Mood tracking features</li>
+                        </ul>
+                    </div>
+
+                    <!-- Month 3 -->
+                    <div class="timeline-item pl-8">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Month 3-4: AI Integration</h3>
+                        <p class="text-gray-600 mb-3">Advanced chatbot capabilities</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• NLP model integration</li>
+                            <li>• Sentiment analysis</li>
+                            <li>• Conversation memory</li>
+                            <li>• Personalization engine</li>
+                        </ul>
+                    </div>
+
+                    <!-- Month 5 -->
+                    <div class="timeline-item pl-8">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Month 5-6: CBT Features</h3>
+                        <p class="text-gray-600 mb-3">Therapeutic tools development</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Thought record exercises</li>
+                            <li>• Behavioral activation</li>
+                            <li>• Mindfulness modules</li>
+                            <li>• Progress tracking</li>
+                        </ul>
+                    </div>
+
+                    <!-- Month 7 -->
+                    <div class="timeline-item pl-8">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Month 7-8: Advanced Features</h3>
+                        <p class="text-gray-600 mb-3">Platform enhancement</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Mobile app development</li>
+                            <li>• Push notifications</li>
+                            <li>• Community features</li>
+                            <li>• Therapist dashboard</li>
+                        </ul>
+                    </div>
+
+                    <!-- Month 9 -->
+                    <div class="timeline-item pl-8">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Month 9-10: Security & Testing</h3>
+                        <p class="text-gray-600 mb-3">Compliance and quality assurance</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• HIPAA compliance</li>
+                            <li>• Security audits</li>
+                            <li>• User testing</li>
+                            <li>• Bug fixes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Month 11 -->
+                    <div class="timeline-item pl-8">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Month 11-12: Launch & Optimization</h3>
+                        <p class="text-gray-600 mb-3">Deployment and scaling</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Production deployment</li>
+                            <li>• Performance optimization</li>
+                            <li>• User feedback integration</li>
+                            <li>• Continuous improvement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">Mental Health Platform Development Roadmap</p>
+            <p class="text-sm text-gray-400">Built with care for better mental wellness solutions</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for timeline items
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
+
